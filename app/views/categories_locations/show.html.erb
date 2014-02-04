@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Category:</b>
+  <%= @categories_location.category_id %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @categories_location.location_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_categories_location_path(@categories_location) %> |
+<%= link_to 'Back', categories_locations_path %>

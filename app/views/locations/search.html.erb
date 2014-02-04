@@ -1,0 +1,27 @@
+<h1>Zoeken</h1>
+
+<%= form_tag('/locations/search') do %>
+	<%= collection_select(:location, :city, Location.find(:all, :select => "DISTINCT city"), :city, :city) %>
+	<%= submit_tag "Zoek" %>
+<% end %>
+
+<table border='0'>
+  <tr>
+    <th>Name</th>
+    <th>City</th>
+    <th>Description</th> 
+    <th>Photo</th>
+</tr>
+
+<% @locations.each do |location| %>
+  <tr>
+    <td><%= link_to location.name, location %></td>
+    <td><%= location.city %></td>
+    <td><%= sanitize(truncate(location.description, length: 100)) %></td>   
+    <td><%= image_tag(location.photo, size: "200x200") %></td>
+  </tr>
+<% end %>
+</table>
+
+
+<br />

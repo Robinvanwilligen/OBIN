@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @location.name %></h1>
+
+<% unless @location.photo == nil %>
+	<div id="fotospace">
+		<%= image_tag(@location.photo, height: "50%", width: "50%") %>
+	</div>
+<% end %>
+	
+<p>
+  <b>Omschrijving:</b><br />
+  <%= @location.description %>
+</p>
+
+<p>
+  <b>Weetjes:</b><br />
+  <%= @location.facts %>
+</p>
+
+<% unless @location.url == nil %>
+	<p>
+		<b>URL:</b><br />
+		<%= @location.url %>
+	</p>
+<% end %>
+
+<% unless @location.address == nil %>
+	<p>
+		<b>Adres:</b><br />
+		<%= @location.address %>
+	</p>
+<% end %>	
+
+<% unless @location.category_id == nil %>
+	<p>
+		<b>Categorie:</b><br />
+		<%= @location.category_id %>
+	</p>
+<% end %>
+
+
+<% link_to 'Terug', locations_path %>

@@ -1,0 +1,29 @@
+<h1>Locaties</h1>
+
+<%= form_tag :action => 'index' do %>
+	<%= collection_select(:location, :city, Location.find(:all, :select => "DISTINCT city"), :city, :city) %>
+	<%= submit_tag "Zoek" %>
+<% end %>
+<br />
+
+<div style='width: 600px;'>
+	<div id="map"></div>
+</div>
+
+<table border='0'>
+  <tr>
+    <th>Name</th>
+    <th>City</th>
+    <th>Description</th> 
+</tr>
+
+<% @locations.each do |location| %>
+  <tr>
+    <td><%= link_to location.name, location %></td>
+    <td><%= location.city %></td>
+    <td><%= sanitize(truncate(location.description, length: 100)) %></td>     
+  </tr>
+<% end %>
+</table>
+
+<br />

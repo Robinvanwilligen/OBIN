@@ -1,0 +1,25 @@
+<h1>Listing categories_locations</h1>
+
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Location</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @categories_locations.each do |categories_location| %>
+  <tr>
+    <td><%= categories_location.category_id %></td>
+    <td><%= categories_location.location_id %></td>
+    <td><%= link_to 'Show', categories_location %></td>
+    <td><%= link_to 'Edit', edit_categories_location_path(categories_location) %></td>
+    <td><%= link_to 'Destroy', categories_location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Categories location', new_categories_location_path %>

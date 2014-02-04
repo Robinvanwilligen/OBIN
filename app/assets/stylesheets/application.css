@@ -1,0 +1,82 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+ #top
+ {
+	padding: 2px;
+	width: auto;
+	height: 10em;
+	background-color: #fffaf7;
+	border-top: 1px solid #000000;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+}
+
+#menu
+{
+	padding: 2px;
+	text-align:center;
+	width:auto;
+	height: 2em;
+	background-color: #FFD447;
+	border: 1px solid #000000;
+
+}
+
+#side
+{
+	padding: 2px;
+	float: left;
+	height:30em;
+	width: 9em;
+	background-color: #FFD447;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+}
+
+#content
+{
+	padding: 2px;
+	float: left;
+	height: auto;
+	width: 85%;
+	background-color: #FFFAF7;
+	margin:2px;
+}
+
+#fotospace
+{
+	float: right;
+	margin:2px;
+	padding:2px;
+	max-width: 50%;
+	height:auto;
+	width: auto\9;
+}
+
+#map
+{
+	width: 800px;
+	height: 400px;
+}
+
+#infowindow
+{
+	width: 400px;
+}
+img
+{
+	border: 1px solid #000000;
+}
